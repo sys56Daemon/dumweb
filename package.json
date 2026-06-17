@@ -1,0 +1,12 @@
+{
+  "name": "air-is-leaking",
+  "version": "1.0.0",
+  "description": "Educational WiFi packet-sniffing demo server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
