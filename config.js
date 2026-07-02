@@ -13,7 +13,7 @@ module.exports = {
   // ── Admin Panel Credentials ───────────────────────
   // Change these before your demo!
   ADMIN_USERNAME: 'admin',
-  ADMIN_PASSWORD: 'demo1234',
+  ADMIN_PASSWORD: '8008135',
 
   // ── Session secret (used to sign the admin cookie) ─
   // Any random string is fine for a local demo.
